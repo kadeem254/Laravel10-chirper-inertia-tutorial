@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Chirps extends Model
 {
     use HasFactory;
+
+    // enable mass assignment for safe attributes.
+    protected $fillable = [
+        'message'
+    ];
 }
