@@ -44,9 +44,13 @@ class ChirpsPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Chirps $chirps)
+    public function delete(User $user, Chirps $chirps):bool
     {
+        // Either repeat logic similar to update
+        // return $chirps->user()->is($user);
         //
+        // Or call the update function as it has the logic
+        return $this->update( $user, $chirps );
     }
 
     /**
